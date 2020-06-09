@@ -1,0 +1,26 @@
+{% extends 'base_generic.html' %}
+
+
+{% block content %}
+{% if objs and objs != 0 %}
+<tr>
+	<th>Название</th>
+	<th>Адрес</th>
+	<th>Цена</th>
+	<th>Ссылка</th>
+</tr>
+{% for a in objs %}
+<tr>
+    <td>{{a.0}}</td>
+    <td>{{a.1}}</td>
+    <td>{{a.2}}</td>
+    <td><a href="{{a.3}}" target="_blank">Перейти</a></td>
+</tr>
+{% endfor %}
+{% elif objs == 0 %}
+<div style="color: #EDB749; font-family: 'Lucida Sans Unicode', 'Lucida Grande', Sans-Serif; display: flex; justify-content: center; font-size: 30px; margin: 100px 80px 100px 80px;">Начни искать объявления, введя параметры :)</div>
+{% else%}
+<div style="color: #EDB749; font-family: 'Lucida Sans Unicode', 'Lucida Grande', Sans-Serif; display: flex; justify-content: center; font-size: 30px; margin: 100px 80px 100px 80px;">Не нашел объявления ;(</div>
+{% endif %}
+{% endblock %}
+

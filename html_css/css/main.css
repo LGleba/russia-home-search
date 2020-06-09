@@ -1,0 +1,455 @@
+/*  Fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap');
+
+/*  General CSS  */
+
+.inp{
+   display:  flex;
+   justify-content: center;
+   width: 100%;
+   padding: 15px;
+   text-align: justify;
+   font-size: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.parent {
+    margin: 30px 0px 0px 0px;
+    margin: 0 auto;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    poition: auto;
+    background-color: rgba(23, 38, 77, 0.8);;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background: rgba(28, 54, 85, .15);
+}
+
+html {
+	background-color: #0a0068;
+}
+
+.wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.wrapper_about{
+    max-width: 1150px;
+    margin: 0 auto;
+    position: relative;
+}
+
+input {
+  margin: 0px 1px;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.inp{
+   display:  flex;
+}
+
+/* Table */
+
+.table{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 14px;
+  width: 70%; /* to align the table with the search string*/
+  text-align: center;
+  border-collapse: collapse;
+  background: #252F48;
+  margin: auto;
+  border-radius: 10px
+}
+.table th {
+  color: #EDB749;
+  border-bottom: 1px solid #304d81;
+  padding: 12px 17px;
+}
+
+.table td {
+  color: #CAD4D6;
+  border-bottom: 1px solid #304d81;
+  border-right:1px solid #304d81;
+  padding: 7px 17px;
+  padding: 20px 20px;
+  transition: 0.1s ease-in-out;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+.table td:last-child {
+  border-right: none;
+}
+.table tr:hover td {
+  color: #EDB749;
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+}
+
+/*  Hero Section  */
+
+.hero{
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background: url('../img/hero.jpg') no-repeat bottom center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.hero .caption{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    margin-top: -105px;
+}
+
+.hero .caption h2{
+    color: #fff;
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;
+    font-weight: lighter;
+    margin: 0;
+    position: relative;
+    display: block;
+}
+
+.hero .caption h3{
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: -15px 0 0 25px;
+    left: 1px;
+}
+
+
+
+/*  listings section  */
+.listings{
+    margin: 30px 100px 100px 100px;
+}
+
+/* Button section */
+
+.form_button {
+         padding: 10px 20px;
+         border: none;
+         border-radius: 5px;
+         font-family: sans-serif;
+         letter-spacing: 1px;
+         font-size: 16xp;
+         color: #252F48;
+         background-color: #EDB749;
+         outline: none;
+         cursor: pointer;
+         transition: 0.3s;
+ }
+
+
+/*reset*/
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #EDB749;
+}
+
+
+/*responsive*/
+
+html, div,
+h1, h2, h3, h4, h5, h6
+{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    line-height:1;
+    background: #010416;
+}
+
+/*  Header Section  */
+
+header .logo{
+    margin-top: 10px;
+    float: left;
+}
+
+header nav{
+    float: right;
+    opacity: 1;
+}
+
+
+header nav ul{
+    margin-top: 40px;
+    list-style: none;
+    overflow: hidden;
+    float: left;
+}
+
+header nav ul li{
+    float: left;
+    margin-left: 50px;
+}
+
+header nav ul li {
+    text-decoration: none;
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+}
+
+
+/*  Search Section  */
+.search {
+    width: 100%;
+    height: 100px;
+    background: #252F48;
+    position: relative;
+}
+
+.search .caption {
+    color: #CAD4D6;
+    font-family: 'PT Serif Caption', serif;
+    font-size: 40px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+
+}
+
+
+/* Footer */
+footer .footer > ul{
+    overflow: hidden;
+}
+
+footer .footer > ul > li{
+    display: block;
+    float: left;
+    list-style: none;
+    margin-right: 60px;
+}
+
+footer .footer > ul > li:last-child{
+    margin-right: 0;
+}
+
+
+footer .footer > ul > li.links{
+    width: 197px;
+}
+
+footer ul li.links > ul > li{
+    display: block;
+    width: 100%;
+    list-style: none;
+    margin-bottom: 27px;
+}
+
+footer ul li.links > ul > li:last-child{
+    margin-bottom: 0;
+}
+
+footer .footer > ul > li.links li a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: .5px;
+    text-align: left;
+}
+
+footer .footer > ul > li.about{
+    width: 327px;
+}
+
+footer ul li.about p{
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: .5px;
+    line-height: 34px;
+    margin-top: -9px;
+}
+
+footer ul li.about > ul > li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+footer ul li.about > ul > li:last-child{
+    margin-right: 0;
+}
+
+footer .copyrights{
+    display: block;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: .5px;
+    border-top: 1px solid #252F48;
+}
+
+/* Authors page */
+
+.wrapperimg {
+/*     width: 350px; */
+    height: 440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.exmpl {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+.exmpl img {
+        height: 100%;
+        width: auto;
+        border-radius: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #252F48;
+}
+
+.about-person {
+    width: 740px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    flex-grow: 1;
+    color: #fff;
+    font-family: sans-serif;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.cards-prop {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+h1 {
+    font-size: 30px;
+    text-align: left;
+}
+h4 {
+    font-size: 20px;
+    text-align: left;
+    margin: 10px 0px;
+}
+
+h5 {
+    margin: 20px 0px;
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+}
+
+.links_install-child-one {
+	position: absolute;
+	margin-top: 700px;
+    padding-top: 50px;
+    padding-left: 2%;
+    padding-right: 2%;
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+}
+
+.links_install-child-two {
+    position: absolute;
+    margin-top: 700px;
+    margin-left: calc(98% - 120px);
+    margin-right: 5%;
+    padding-top: 50px;
+    color: #fff;
+    font-family: "lato-regular", Helvetica, Arial, sans-serif;
+}
+
+.lgleba-table {
+	font-family: "lato-regular", Helvetica, Arial, sans-serif;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	color: #ffffff;
+	margin: 30px calc(4% + 120px) 0px calc(4% + 120px);
+	background-color: rgba(37, 47, 72);
+	font-size: 20px;
+}
+
+.lgleba-adds {
+	display: flex;
+	flex-direction: row;
+}
+
+.lgleba-add {
+	padding: 8px;
+	min-width: 200px;
+	flex-grow: 1;
+	text-align: center;
+}
+
+.lgleba-add:nth-last-child(-n+2) {
+	min-width: 50px;
+	max-width: 100px;
+}

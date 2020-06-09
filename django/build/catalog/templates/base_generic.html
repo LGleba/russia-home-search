@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Fix-IT Housing</title>
+	<meta charset="utf-8">
+	<meta name="author" content="SorryForWhatIveDone.com">
+	<meta name="description" content="Информация о сдающихся квартирах по г.Москве"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+	<div class="links_install-child-one">
+		<a href="https://teleg.one/russia_home_search_bot" target="_blank" style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+			<img src="{% static 'img/telegram.png' %}"width="85" height="85">
+			<p style="margin: 5px;">Мы в Telegram</p>
+			<p style="margin: 5px;">Перейти &uArr;	</p>
+		</a>
+	</div>
+	<div class="links_install-child-two">
+		<a href="https://yadi.sk/d/M9tZxO4GyLaD1g" target="_blank" style="text-decoration: none; display: flex; flex-direction: column; align-items: center;">
+			<img src="{% static 'img/windows.png' %}" width="85" height="85">
+			<p style="margin: 5px;">Приложение</p>
+			<p style="margin: 5px;">Скачать &dArr;	</p>
+		</a>
+	</div>
+	<section class="hero">
+		<header>
+			<div class="wrapper">
+				<a><img src="{% static 'img/logo.png' %}" class="logo" width="85" height="85"/></a>
+				<nav>
+					<ul>
+						<li><a href="{% url 'catalog:index' %}">Сервис</a></li>
+						<li><a href="{% url 'catalog:about' %}">О Проекте</a></li>
+						<li><a href="{% url 'catalog:authors' %}">О команде</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+			<section class="caption">
+				<h2 class="caption">Найди дом своей мечты</h2>
+				<h3 class="properties">Проект работает с территорией России</h3>
+			</section>
+		<div class="wrapper_about" style=" margin-top: 531px;">
+			<div class="parent">
+				<form action="{% url 'catalog:index' %}" method="POST">
+	                    {% csrf_token %}
+					<div class="inp">
+
+						<select id="selectID" name="buy">
+							<option value=snyat>Снять</option>
+							<option value=kupit>Купить</option>
+						</select>
+						<input type="text" id="city" name="city" required placeholder="Город" autocomplete="off">
+						<select id="selectType" name="house_type">
+							<option value=kvartira>Квартира</option>
+							<option value=dom>Дом</option>
+						</select>
+						<input type="text" id="metro" name="metro" placeholder="Метро" autocomplete="off">
+						<input type="text" id="price_min" required name="price_min" placeholder="Минимальная цена" autocomplete="off">
+						<input type="text" id="price_max" name="price_max" placeholder="Максимальная цена" autocomplete="off">
+						<button class="form_button">Искать</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section class="listings">
+		<table class="table" style="font-size:1.2em">
+			{% block content %}{% endblock %}
+		</table>
+	</section>
+	<footer>
+		<div class="wrapper footer">
+			<ul>
+				<li class="links">
+					<ul>
+						<li><a>Меню</a></li>
+						<li><a href="{% url 'catalog:about' %}">О Проекте</a></li>
+						<li><a href="{% url 'catalog:authors' %}">О команде</a></li>
+						<li><a href="{% url 'catalog:index' %}">Сервис</a></li>
+					</ul>
+				</li>
+				<li class="about">
+					<p>Вебсайт предназначен для поиска квартир, разработан для проекта МГТУ им.Баумана в 2020 году.</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="copyrights wrapper">
+			Проект создан командой Fix-IT.
+		</div>
+	</footer>
+
+</body>
+</html>
