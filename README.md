@@ -4,11 +4,11 @@
 
 [Platforms](#Platforms) 
 
-# Description
+## Description
 
 Multiplatform real estate search service.
 
-# Platforms
+## Platforms
 
 - WebSite - Django. Python 3.
 - Telegram bot - telebot. Python 3.
